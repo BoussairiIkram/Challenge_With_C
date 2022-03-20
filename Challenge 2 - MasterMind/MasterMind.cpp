@@ -24,18 +24,18 @@ do{
     GenererCodeMystere(Color_Mystere,5);
 	printf("%s.\n",Color_Mystere);
 	
-	printf("Donnez Le nombre de tentatif :");
+	printf("Choissisez le nombre maximal de tentative:");
 	scanf("%d",&Max_Tentatif);
 
 do{
 	Color_Vraie=0,Color_Exist=0;
-	printf("Tentatif: %d/%d ; Donnez Color Mystere : ",Tentatif+1,Max_Tentatif); scanf("%s",Color);
+	printf("Tentative %d/%d:**Donnez UN CODE:**",Tentatif+1,Max_Tentatif); scanf("%s",Color);
 	
 	for(int i=0;i<4;i++){
 		if(Color[i]==Color_Mystere[i]) Color_Vraie++;  
 	}
 	if(Color_Vraie==4) {
-		printf("Bravo! Le nombre Mystere est bien %s.\n",Color_Mystere);
+		printf("\nBravo! Le Couleur Mystere est bien %s.\n",Color_Mystere);
 		break;
 	}
 	
@@ -50,7 +50,7 @@ do{
 	
 }while(Tentatif<Max_Tentatif);
 
-if(Tentatif == Max_Tentatif && Color_Vraie!=4) printf("Oups Vous avvez atteindre le nombre max des tentatif.\n");
+if(Tentatif == Max_Tentatif && Color_Vraie!=4) printf("\n------OUPS Vous-avez atteindre le nombre maximal de tentative.-------\n");
 
 printf("\nVoulez-vous Rejouer?   1=oui\t2=non \t\t");
 scanf("%d",&Rejouer);
