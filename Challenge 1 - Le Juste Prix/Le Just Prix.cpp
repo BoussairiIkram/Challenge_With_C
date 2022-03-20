@@ -14,7 +14,7 @@ int main(){
     int Rejouer=2; 
 
 do{
-	int N_Mystere= GenererNombreAleatoire(0,10);
+	int N_Mystere= GenererNombreAleatoire(0,100);
 	Tentatif=1;
 	printf("%d",N_Mystere);
 	 
